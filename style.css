@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=SUSE:wght@100..800&display=swap');
+html{
+    --Purple-100: hsl(254, 88%, 90%);
+    --Purple-500: hsl(256, 67%, 59%);
+    --Yellow-100: hsl(31, 66%, 93%);
+    --Yellow-500: hsl(39, 100%, 71%);
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 7%);
+
+    height: 100%;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+}
+
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body{
+    min-height: 100vh;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgb(248, 248, 248);
+}
+
+.bento{
+    display: grid;
+    max-width: 80vw;
+    min-width: min-content;
+    height: 100vh;
+    max-height: 85vh;
+    margin-block: 7.5vh;
+    margin-inline: auto;
+    overflow-x: scroll;
+
+    grid-template: repeat(3, 1fr) / repeat( 4, 1fr);
+    gap: 20px;
+}
+
+.bento__elem, .sub-grid__elem{
+    padding-inline: 12.5%;
+    border-radius: 15px;
+    
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    gap: 10px;
+
+    background-color: var(--Purple-100);
+}
+
+.elem__img{
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.element__title{
+    height: fit-content;
+
+    font-style: italic;
+    font-size: 1.5em;
+    font-weight: 550;
+    line-height: 1em;
+    overflow-y: hidden;
+}
+.element__para{
+    font-weight: 400;
+}
+.element__para, .element__title{
+    display: block;
+    max-width: 100%;
+
+}
+
+.bento__elem1{
+    grid-area: 1 / 1 / 4 / 2;
+    border-radius: 0;
+    
+    background-color: #fff;
+}
+
+.bento__sub-grid{
+    display: grid;
+
+    grid-template: repeat(2, 1fr) / 1fr ;
+    gap: 15px;
+}
+
+.sub-grid__elem{
+    flex-flow: column;
+    justify-content: center;
+
+    background-color: var(--Yellow-100);
+}
+
+/*Elemebto 1-1*/
+.sub-grid__elem1{
+    gap: 1em;
+}
+.sub-grid__elem1 > .element__title{
+    font-size: 2em;
+}
+.elem1-1__img{
+    width: 100%;
+}
+
+/*Elemento 1-2*/
+.sub-grid__elem2{
+    padding-inline: 10% 5%;
+    padding-block: 3%;
+    
+    justify-content: space-evenly;
+    align-items: right;
+    
+    background-color: var(--Yellow-500);
+}
+.sub-grid__elem2 > .element__title{
+    max-width: 70%;
+    font-size: 1.8em;
+}
+.elem1-2__img{
+    width: 90%;
+}
+
+/*Elemento 2*/
+.bento__elem2{
+    grid-area: 1 / 2 / 2 / span 2;
+    align-items: center;
+
+    background-color: var(--Purple-500);
+    color: var(--White);
+}
+.bento__elem2 > .element__title{
+    font-size: 2.55em;
+    text-align: center;
+}
+.elem2__img{
+    width: 5%;
+}
+
+/*Elemento 3*/
+.bento__elem3{
+    grid-area: 1 / 4 / span 2 / 5;
+}
+.bento__elem3 > .element__title{
+    font-size: 2em;
+}
+.elem3__img{
+    min-width: 150%;
+    margin-inline-start: 10px;
+}
+
+.bento__elem4, .bento__elem6{
+    background-color: var(--White);
+}
+/*Elemento 4*/
+.bento__elem4{
+    justify-content: center;
+}
+.elem4__img{
+    min-width: 150%; 
+}
+
+/*Elemento 5*/
+.bento__elem5{
+    padding-inline: 9%;
+    padding-block-start: 5%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+
+    background-color: var(--Yellow-500);
+}
+.bento__elem5 > .element__title{
+    width: 70%;
+    min-height: 150px;
+    font-size: 1.6em;
+    overflow-y: hidden;
+
+    align-self: baseline;
+}
+.elem5__img-container{
+    width: 95%;
+    max-width: 250px;
+    height: max-content;
+    overflow-y: hidden;
+    position: relative;
+    top: 0;
+}
+.elem5__img{ 
+    width: 100%;
+    max-height: 200px;
+}
+
+/*Elemento 6*/
+.bento__elem6{
+    justify-content: space-evenly;
+}
+.bento__elem6 > .element__title{
+    font-size: 4em;
+    min-height: fit-content;
+}
+.bento__elem6 > .element__para{
+    font-size: 1.2em;
+    min-height: fit-content;
+}
+
+/*Elemento 7*/
+.bento__elem7{
+    grid-area: 3 / 3 / 4 / 5;
+    padding: 5%;
+
+    flex-flow: row;
+    
+    background-color: var(--Purple-500);
+}
+.bento__elem7 > .element__title{
+    max-width: 60%;
+    padding: 5%;
+    
+    font-size: 2em;
+    color: var(--White)
+}
+.elem7__img{
+    width: 40%;
+    height: 90%;
+    aspect-ratio: 1/1;
+}
+
+.attribution {
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
