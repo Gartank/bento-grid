@@ -13,6 +13,7 @@ html{
     font-size: 18px;
 }
 
+/* TODO arreglar vistas por debajo de 1200px ancho e implementar la vista de mobile */
 
 *, *::after, *::before{
     box-sizing: border-box;
@@ -23,32 +24,38 @@ html{
 
 body{
     min-height: 100vh;
+    overflow: scroll;
+    overflow-x: scroll;
 }
 
 main {
     width: 100%;
     height: 100vh;
-
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: scroll;
+    
     background-color: rgb(248, 248, 248);
 }
 
 .bento{
     display: grid;
+    max-height: 80vh;
     max-width: 80vw;
-    min-width: min-content;
-    height: 100vh;
-    max-height: 85vh;
-    margin-block: 7.5vh;
-    margin-inline: auto;
-    overflow-x: scroll;
+    width: 1155px; 
 
-    grid-template: repeat(3, 1fr) / repeat( 4, 1fr);
+    aspect-ratio: 1.3/1;
+    
+    grid-template: repeat(3, 30%) / repeat(4, 23.5%);
     gap: 20px;
 }
 
 .bento__elem, .sub-grid__elem{
     padding-inline: 12.5%;
     border-radius: 15px;
+    overflow-x: visible;
     
     display: flex;
     justify-content: center;
@@ -66,11 +73,17 @@ main {
 .element__title{
     height: fit-content;
 
-    font-style: italic;
     font-size: 1.5em;
-    font-weight: 550;
+    font-weight: 600;
     line-height: 1em;
     overflow-y: hidden;
+}
+.element__yellow{
+    color: var(--Yellow-500);
+}
+.element__purple{
+    color: var(--Purple-500);
+    font-style: italic;
 }
 .element__para{
     font-weight: 400;
@@ -107,7 +120,7 @@ main {
     gap: 1em;
 }
 .sub-grid__elem1 > .element__title{
-    font-size: 2em;
+    font-size: 1.7em;
 }
 .elem1-1__img{
     width: 100%;
@@ -125,7 +138,7 @@ main {
 }
 .sub-grid__elem2 > .element__title{
     max-width: 70%;
-    font-size: 1.8em;
+    font-size: 1.7em;
 }
 .elem1-2__img{
     width: 90%;
@@ -140,23 +153,23 @@ main {
     color: var(--White);
 }
 .bento__elem2 > .element__title{
-    font-size: 2.55em;
+    font-size: 2.5em;
     text-align: center;
 }
 .elem2__img{
-    width: 5%;
+    width: 50%;
 }
-
 /*Elemento 3*/
 .bento__elem3{
     grid-area: 1 / 4 / span 2 / 5;
 }
 .bento__elem3 > .element__title{
-    font-size: 2em;
+    width: 90%;
+    font-size: 1.5em;
 }
 .elem3__img{
-    min-width: 150%;
-    margin-inline-start: 10px;
+    min-width: 140%;
+    margin-inline-start: 5%;
 }
 
 .bento__elem4, .bento__elem6{
@@ -176,29 +189,28 @@ main {
     padding-block-start: 5%;
     align-items: center;
     justify-content: space-between;
-    gap: 5px;
+    gap: 10px;
 
     background-color: var(--Yellow-500);
 }
 .bento__elem5 > .element__title{
-    width: 70%;
-    min-height: 150px;
-    font-size: 1.6em;
+    width: 80%;
+    height: 70%;
+    box-sizing: content-box;
     overflow-y: hidden;
 
     align-self: baseline;
+
+    font-size: 1.5em;
 }
 .elem5__img-container{
-    width: 95%;
-    max-width: 250px;
-    height: max-content;
+    max-width: 100%;
     overflow-y: hidden;
     position: relative;
     top: 0;
 }
 .elem5__img{ 
     width: 100%;
-    max-height: 200px;
 }
 
 /*Elemento 6*/
@@ -210,7 +222,7 @@ main {
     min-height: fit-content;
 }
 .bento__elem6 > .element__para{
-    font-size: 1.2em;
+    font-size: 1.1em;
     min-height: fit-content;
 }
 
@@ -224,16 +236,18 @@ main {
     background-color: var(--Purple-500);
 }
 .bento__elem7 > .element__title{
-    max-width: 60%;
-    padding: 5%;
-    
-    font-size: 2em;
+    width: 60%;
+    padding: 3%;
+
+    font-size: 2.1em;
     color: var(--White)
 }
+.elem7__img-container{
+    width: 45%;
+}
 .elem7__img{
-    width: 40%;
-    height: 90%;
-    aspect-ratio: 1/1;
+    max-width: 100%;
+    height: 100%;
 }
 
 .attribution {
