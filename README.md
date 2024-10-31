@@ -37,8 +37,8 @@ Users should be able to:
 ![alt text](<assets/images/screenshots/Opera Instantánea_2024-10-31_092844_127.0.0.1.png>)
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Repository](https://github.com/Gartank/bento-grid)
+- Live Site URL: [Live SOlution](https://gartank.github.io/bento-grid/)
 
 ## My process
 
@@ -66,4 +66,4 @@ I'll still learn about responsive best practices and how to improve my designs w
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@gartank](https://www.frontendmentor.io/profile/Gartank)
