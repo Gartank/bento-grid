@@ -30,8 +30,14 @@ html{
 
 body{
     min-height: 100vh;
-    max-height: fit-content;
+    max-height: max-content;
     overflow: scroll;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 main {
