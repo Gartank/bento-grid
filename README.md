@@ -38,7 +38,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Repository](https://github.com/Gartank/bento-grid)
-- Live Site URL: [Live SOlution](https://gartank.github.io/bento-grid/)
+- Live Site URL: [Live Solution](https://gartank.github.io/bento-grid/)
 
 ## My process
 
@@ -66,4 +66,4 @@ I'll still learn about responsive best practices and how to improve my designs w
 
 ## Author
 
-- Frontend Mentor - [@gartank](https://www.frontendmentor.io/profile/Gartank)
+- Frontend Mentor - [@Gartank](https://www.frontendmentor.io/profile/Gartank)
